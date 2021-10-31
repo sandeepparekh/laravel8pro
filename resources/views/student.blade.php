@@ -1,0 +1,1 @@
+<x-student name="sandeep" :students="$students"/>
