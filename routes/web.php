@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\UsersController;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,3 +20,9 @@ Route::get('/', function () {
 });
 
 Route::get('/home/{name?}', [HomeController::class, 'index'])->name('home.index');
+
+// Route::get('/users', function(){
+//     return view('users');
+// });
+
+Route::get('/users', [UsersController::class, 'index'])->name('users.index');
